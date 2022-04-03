@@ -1,0 +1,22 @@
+D:\Workspace\GolandWorkspace\goroutines-example>go run cmd\zero-concurency\main.go
+[200] https://stackoverflow.com/ is up
+[200] https://github.com/ is up
+[200] https://www.linkedin.com/ is up
+[200] http://medium.com/ is up
+[200] https://golang.org/ is up
+[200] https://www.udemy.com/ is up
+[200] https://www.coursera.org/ is up
+[200] https://wesionary.team/ is up
+Time elapsed: 5.3865637s
+
+D:\Workspace\GolandWorkspace\goroutines-example>go run cmd\zero-concurency\main.go
+[200] https://github.com/ is up
+[200] http://medium.com/ is up
+[200] https://stackoverflow.com/ is up
+[200] https://www.linkedin.com/ is up
+[200] https://www.coursera.org/ is up
+[200] https://wesionary.team/ is up
+[200] https://golang.org/ is up
+[200] https://www.udemy.com/ is up
+Time elapsed: 1.0314729s
+
