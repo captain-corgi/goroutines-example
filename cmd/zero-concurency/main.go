@@ -23,7 +23,7 @@ func main() {
 		"https://www.udemy.com/",
 		"https://www.coursera.org/",
 		"https://wesionary.team/",
-		"https://conmeo.com.vn/",
+		"https://www.facebook.com/",
 	}
 
 	// Start timer
