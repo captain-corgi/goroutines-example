@@ -4,12 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/captain-corgi/goroutines-example/pkg/news"
 )
 
 const (
-	API_KEY = "f32ee7b348msh230c75aaf106721p1366a6jsn952b266f7ae5"
+	API_KEY         = "f32ee7b348msh230c75aaf106721p1366a6jsn952b266f7ae5"
+	API_MAX_TIMEOUT = 3 * time.Second
 
 	API_GOOGLE_NEWS_HOST = "google-news.p.rapidapi.com"
 	GOOGLE_NEWS_URL      = "https://google-news.p.rapidapi.com/v1/top_headlines?lang=en&country=US"
@@ -50,6 +52,8 @@ func main() {
 	case freeNewsReponse := <-free:
 		fmt.Printf("Source: %s\n", freeNewsReponse.Source)
 		articles = freeNewsReponse.Articles
+	case <-time.After(API_MAX_TIMEOUT):
+		fmt.Println("Time out! API calls took too long!!")
 	}
 
 	// Print result
