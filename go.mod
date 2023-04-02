@@ -1,3 +1,3 @@
 module github.com/captain-corgi/goroutines-example
 
-go 1.18
+go 1.20
